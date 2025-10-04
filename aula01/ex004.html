@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-size: normal 20pt;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('qual é seu nom0?');
+        document.write(`Olá, ${nome}! seu nome tem ${nome.length} letras.<br/>`);
+        document.write(`Seu em maiúscula é ${nome.toUpperCase()}`);
+        /*
+        .length diz quantos caracteres tem
+
+        para formatar números em casas decimais uas o to.Fixed();
+        para colocar a vírgula n1.toFixed(2).replace('.', ','); usa-se o .replace
+
+        para usar o real
+        n1.toLocaleString('pt-BR', {style: 'currency'. currency: 'BRL'})
+        */
+    </script>
+</body>
+</html>

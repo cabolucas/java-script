@@ -21,10 +21,39 @@
         var n2 = Number.parseInt(window.prompt('Digite outro número: '));
         var s = n1 + n2 // 
         window.alert('A soma dos valores é ' + s)
+
+        // place holder (window.alert(`A soma de ${n1} e ${n2} é igual a ${s}`))
+
         /* + tem efeito de concatenação (string + string) alem de servir para adição (number + number). para funcionar da maneira correta terá que fazer a conversão. 
-        string > number 
-        'Number.parseFloat(n)' para números decimais
+
+                string > number 
+        'Number.parseFloat(n)' para números real
+        var n2 = Number.parseFloat(window.prompt('Digite outro número: '));
         'Number.parseInt(n)' para números inteiros
+        var n2 = Number.parseInt(window.prompt('Digite outro número: '));
+        'Number(n)' o próprio JS decide ao inves de colocar parse
+        var n2 = Number(window.prompt('Digite outro número: '));
+
+                number > string
+        'String(n)'
+        'n.toString(n)'
+
+                Formato de String
+
+        + (contatenação)
+
+        `O alino ` + nome + ` com ` + idade + `anos tirou a nota ` + nota
+
+
+        ${s} (chama-se de place holder) usar crase
+
+        `o aluno ${nome} com ${idade} anos tirou a nota ${nota}`
+
+                Atributo
+        s.length (quantos caracteres a string tem)
+        s.toUpperCase() Jogar as letras tudo para Maiuscula
+        s.toLowerCase() jogar tudo para minúsculas
+
         */
     </script>
 </body>
