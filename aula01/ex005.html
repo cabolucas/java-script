@@ -8,67 +8,39 @@
     <style>
         body {
             font-size: normal 20pt;
+            background-color: aqua;
         }
     </style>
 </head>
 <body>
+    <h1>Iniciando testes com DOM</h1>
+
+    <p>Aqui vai o resultado</p>
+
+    <p>Apredendo a usar o DOM em JS</p>
+
+    <div>
+        Cick em mim
+    </div>
+
+
     <script>
-        var nome = window.prompt('qual é seu nom0?');
-        document.write(`Olá, ${nome}! seu nome tem ${nome.length} letras.<br/>`);
-        document.write(`Seu em maiúscula é ${nome.toUpperCase()}`);
-        /*
-            OPERADORES ARITIMETICOS JS
-        binários -> (+) soma (-) subitração (*) multiplicação (/)divisão real que leva em conta a vírgula (%) usado para calcular resto da divisão inteira, ou seja, para no resultado inteiro, mostra o resto - deixa o resto- (**)potencia de 2 - ao quadrado-
-
-            PRECEDENCIA
-        1->()
-        2-> **
-        3->* / %
-        4-> +-
-            OPERADOR DE INCREMENTO
         
-        vimos que é possível abreviar a sentença;
+        /* O QUE É DOM - DOCUMENT OBJECT MODEL
+        - Conjunto de documentos que tem no navegador
+        - Fazer a árvore dom WINDOW
+        - Dentro do window tem ; location, documento, history etc...
+        - Dentro do document tem o HTML -> (head e body)
 
-        normal seria;
-
-        var num = 8
-
-        'num = num + 4' é a mesma coisa se reduzir para 'num += 4' ou é possível reduzir ainda mai quando for para acrescentar ou diminior apenas uma unidade -> var x = 5 / x = x + 1 -> x++ / x-- irá acrescentar/diminuir ou multiplicar (1)
-
-        pre incremento n -- ou --n a posição do sinal irá fazer diferença,       
-        
-            OPERADORES RELACIONAIS
-        5 > 2 (CINCO MAIOR QUE DOIS - TRUE)
-        7 < 4 (SETE MENOR QUE QUATRO - FALSE)
-        8 >= 8 (MAIOR OU IGAUL - TRUE)
-        9 <= 7 (MENOR OU IGUAL - FALSE)
-        5 == 5 (IGUAL - TRUE)
-        4 != 4 (NÃO IGUAL - FALSE)
-
-            OPERADORES DE IDENTIDADE
-        5 == 5 (cinco é igual a cinco) TRUE
-        5 == '5' (o JS não irá verificar o tipo mas sim o valor) TRUE
-        5 === '5' (com 3 sinais de igualdade verifica se é identico TIPO) FALSE
-        
-            OPERADORES LÓGICOS
-        ! NEGAÇÃO NÃO 
-        && CONJUÇÃO É
-        || DISJUNÇÃO OU
-
-            ORDEM DE RESOLUÇÃO
-        1 - ARITIMETICOS (NA ORDEM DE PREFERENCIA)
-        2 - RELACIONAIS (NÃO TEM ORDEM DE PREFERENCIA)
-        3 - LÓGICOS (NA ORDEM DE PRECEDENCIA NÃO / É / OU)
-
-            OPERADOR TERNÁRIO
-
-            ex: teste ? true : false 
-            ex: média>= 7.0 "Aprovado" : "Reprovado"
-        ? 
-        :
-
+         
 
         */
+        //comando DOM para modificar via js o html ou css;
+        // diversas formas, para reduzir o código pode-se colocar uma variavel no codigo principal para fazer as demais alterações (codigo principal window.document.getElementsByTagName('p')[1] com a variável - neste caso foi atribuido a var d -)
+        var d = window.document.getElementsByTagName('p')[1]
+        d.innerText = 'Olá'  
+        d.style.color = 'blue'
+        
     </script>
 </body>
 </html>
