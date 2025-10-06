@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div#area {
+            font: normal 1.3em arial;
+            background: red;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+    para nao poluir o HTML COM 
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()">
+    Usamos o addEventListener no próprio JS  -->
+
+    <div id="area">
+        Interaja
+    </div>
+
+    <script>
+        const a = window.document.getElementById('area')
+        // colocar a variável dentro do script fora da fuction gera problemas, pode gerar conflitos de nome, dificulta o controle e a manutenção e polui o escopo global, impossivel reutilizar o código facilmente . . .
+        
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseleave', saiu)
+
+        function clicar() {
+            a.innerText = 'clicou'
+            a.style.background = 'blue'
+        }
+
+        function entrar() {
+            a.innerText = 'entrou'
+
+        }
+
+        function saiu() {            
+            a.innerText = 'saiu'
+            a.style.background = 'red'
+        }
+
+        /*
+            
+
+        */
+    </script>
+</body>
+</html>
