@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Que horas são?</h1>
+
+    <input type="time" name="hora" id="hora">
+    <input type="button" value="Enviar" onclick="calcular()">
+
+    <div id="res"></div>
+
+    <script>
+        
+        function calcular() {
+            const hora = window.document.getElementById('hora')
+            const res = window.document.getElementById('res')
+            const h = Number('partes')
+
+            res.innerHTML += (`A hora é ${t}`)
+            
+            if (hora >= 0 || <= 12) {
+
+                res.innerHTML += `Deve-se desejar Bom dia!`           
+
+            } else if (hora > 12 || < 18) { 
+
+                res.innerHTML += `Deverá cumprimentar com um Boa Tarde`
+            } else {
+                res.innerHTML += `Deverá fizer boa noite.`
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
