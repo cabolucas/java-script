@@ -18,21 +18,46 @@
         function calcular() {
             const hora = window.document.getElementById('hora')
             const res = window.document.getElementById('res')
-            const h = Number('partes')
+            const partes = hora.value.split(':') //serve para separar os valores da hora 
+            const h = Number(partes[0]) 
 
-            res.innerHTML += (`A hora é ${t}`)
+            if (hora.value === "") {
+                res.innerHTML = "Por favor, insira uma hora."
+                return
+            } // é uma validação manual (boa pratica em projetos, caso o usuario não coloque a hora ele irá aparecer uma mensagem. a condição diz, se o valor digitado no campo hora for igual (===) a (vazio) aparecerá uma mensagem informando para digitar a hora)
+
+            res.innerHTML += (`A hora é ${hora.value}<br>`)
             
-            if (hora >= 0 || <= 12) {
+            if (h >= 0 && h <= 12) {
 
                 res.innerHTML += `Deve-se desejar Bom dia!`           
 
-            } else if (hora > 12 || < 18) { 
+            } else if (h > 12 && h < 18) { 
 
                 res.innerHTML += `Deverá cumprimentar com um Boa Tarde`
             } else {
-                res.innerHTML += `Deverá fizer boa noite.`
+                res.innerHTML += `Deverá falar boa noite.`
             }
+        } 
+        // caso quisesse pegar a hora atual const agora -seria a variavel- = new Date() const. hora = agora.getHours()
+
+
+        /*
+            Condição Multipla (expressão)
+            irá execultar cada case por vez, o brak é obrigatório, deve ser usado com cautela. ele irá compara uma mesma variavel com varios valores diferentes se usasse a if else poderia ficar confuso. 
+            
+        - switch(expressão){
+            case valor 1:
+                break
+            case valor 2:
+                break
+            case valor 3:
+                break
+            defaul:
+                break
         }
+        
+        */
 
 
 
