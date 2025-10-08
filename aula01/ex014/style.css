@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgba(3, 3, 71, 0.799);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+section {
+    background-color: white;    
+    color: black;    
+    width: 70vw;
+    height: 45vh;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 50px;   
+
+    display: flex;    
+
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    
+}
+
+section > div > img {
+    width: 150px;
+    height: 150px;    
+    object-fit: certer;
+    border-radius: 50%;
+    border: 5px solid rgba(3, 3, 71, 0.799);
+
+    
+}
+
+footer {
+    text-align: center;
+}
