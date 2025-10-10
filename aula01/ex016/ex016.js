@@ -12,6 +12,10 @@ if (ini.value.length == 0 || nfim.value.length == 0 || npas.value.length == 0) {
     let i = Number(ini.value)
     let f = Number(nfim.value)
     let p = Number(npas.value)
+    if (p <= 0) {
+        window.alert('passo inválido ! considerando passo 1')
+        p = 1
+    }
     if (i < f) {
         for(c = i; c <= f; c += p) {
         res.innerHTML += `${c}`
