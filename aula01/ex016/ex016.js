@@ -15,9 +15,9 @@ if (ini.value.length == 0 || nfim.value.length == 0 || npas.value.length == 0) {
     if (i < f) {
         for(c = i; c <= f; c += p) {
         res.innerHTML += `${c}`
-    }
+        }
     } else {
-        for(let c = i; c >= f; c -+ p) {
+        for(let c = i; c >= f; c -= p) {
             res.innerHTML += `${c}`
         }
     }
